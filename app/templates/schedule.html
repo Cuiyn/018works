@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>同学，你好！</h1>
+今天是星期{{Weekday}}，
+{% if Weeknum >=6 %}
+没有正课！
+{% else %}
+今天的课表是：
+	{% for name in className %}
+		{% if name[0] %}
+	    	<p>第{{loop.index*2-1}}-{{loop.index*2}}节：{{name[0]}}</b></p>
+		{% else %}
+			<p>第{{loop.index*2-1}}-{{loop.index*2}}节：无课</b></p>
+	    {% endif %}
+	{% endfor %}
+{% endif %}
+{% endblock %}

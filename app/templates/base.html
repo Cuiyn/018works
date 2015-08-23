@@ -1,0 +1,18 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>1303018班作业通知</title>
+    {% endif %}
+  </head>
+  <body>
+    <div><h1>1303018班作业通知</h1></div>
+    <div><a href="/index">主页</a></div>
+    <div><a href="/add">添加通知</a></div>
+    <div><a href="/schedule">课表</a></div>
+    <div>现在是{{Year}}年{{Month}}月{{Day}}日，星期{{Weekday}}。</div>
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>

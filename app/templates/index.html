@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% endwith %}
+
+<h1>同学，你好！</h1>
+今天是星期{{Weekday}}，
+{% if Weeknum >=6 %}
+周末请好好休息！
+{% else %}
+请注意完成作业！
+{% endif %}
+最新的作业情况为：
+<h2>数据库系统：</h2>
+{% for s in sjkpost %}
+	<p>日期：{{s.date}}</b></p>
+	<p>内容：{{s.body}}</b></p>
+{% endfor %}
+
+<h2>操作系统：</h2>
+{% for s in czxtpost %}
+	<p>日期：{{s.date}}</b></p>
+	<p>内容：{{s.body}}</b></p>
+{% endfor %}
+
+<h2>计算机通信与网络：</h2>
+{% for s in txwlpost %}
+	<p>日期：{{s.date}}</b></p>
+	<p>内容：{{s.body}}</b></p>
+{% endfor %}
+
+<h2>算法设计与软件工程：</h2>
+{% for s in sfpost %}
+	<p>日期：{{s.date}}</b></p>
+	<p>内容：{{s.body}}</b></p>
+{% endfor %}
+
+<h2>微机应用系统及设计：</h2>
+{% for s in wjyypost %}
+	<p>日期：{{s.date}}</b></p>
+	<p>内容：{{s.body}}</b></p>
+{% endfor %}
+
+<h2>数字信号处理：</h2>
+{% for s in xhpost %}
+	<p>日期：{{s.date}}</b></p>
+	<p>内容：{{s.body}}</b></p>
+{% endfor %}
+{% endblock %}

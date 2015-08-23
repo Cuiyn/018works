@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>添加作业通知</h2>
+{% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% if error %}<p class=error><strong>提示信息:</strong> {{ error }}{% endif %}
+<form action="" method="post" name="add">
+    {{form.hidden_tag()}}
+    <p>
+        科目名称:<br>
+        {{form.subject(size=40)}}<br>
+    </p>
+    <p>
+        识别代码:<br>
+        {{form.code(size=40)}}<br>
+    </p>
+    <p>
+        作业内容:<br>
+        {{form.homework(size=40)}}<br>
+    </p>
+    <p><input type=submit value=提交></p>
+</form>
+{% endblock %}

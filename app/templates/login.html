@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<h2>登录</h2>
+{% if error %}<p class=error><strong>错误信息:</strong> {{ error }}{% endif %}
+<form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+    <p>
+        用户名:<br>
+        {{form.username(size=40)}}<br>
+    </p>
+    <p><input type=submit value=登录></p>
+</form>
+{% endblock %}
