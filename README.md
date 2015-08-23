@@ -1,5 +1,5 @@
 # 018works
-018班级作业事物通知Web APP，基于Python/Flask
+018班级作业事物通知Web APP，基于Python/Flask/SQLite
 
 功能如下：
 
@@ -21,7 +21,5 @@
 下载源码，安装好Python/Flask环境（测试环境为Python 2.7.9，package版本参见requirements.txt），运行run.py即可。
 
 识别代码默认均为123，可修改数据库app.db改变默认值。
-
-*****
 
 初学之作，欢迎指教~
