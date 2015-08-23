@@ -1,5 +1,5 @@
 # 018works
-018班级作业事物通知Web APP，基于Python/Flask/SQLite
+018班级作业事务通知Web APP，基于Python/Flask/SQLite
 
 功能如下：
 
