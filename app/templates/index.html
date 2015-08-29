@@ -12,37 +12,55 @@
 请注意完成作业！
 {% endif %}
 最新的作业情况为：
-<h2>数据库系统：</h2>
+<p>
+<b><big>数据库系统：</big></b>
+<a href="sjk"><small>历史通知</small></a>
+</p>
 {% for s in sjkpost %}
 	<p>日期：{{s.date}}</b></p>
 	<p>内容：{{s.body}}</b></p>
 {% endfor %}
 
-<h2>操作系统：</h2>
+<p>
+<b><big>操作系统：</big></b>
+<a href="czxt"><small>历史通知</small></a>
+</p>
 {% for s in czxtpost %}
 	<p>日期：{{s.date}}</b></p>
 	<p>内容：{{s.body}}</b></p>
 {% endfor %}
 
-<h2>计算机通信与网络：</h2>
+<p>
+<b><big>计算机通信与网络：</big></b>
+<a href="txwl"><small>历史通知</small></a>
+</p>
 {% for s in txwlpost %}
 	<p>日期：{{s.date}}</b></p>
 	<p>内容：{{s.body}}</b></p>
 {% endfor %}
 
-<h2>算法设计与软件工程：</h2>
+<p>
+<b><big>算法设计与软件工程：</big></b>
+<a href="sf"><small>历史通知</small></a>
+</p>
 {% for s in sfpost %}
 	<p>日期：{{s.date}}</b></p>
 	<p>内容：{{s.body}}</b></p>
 {% endfor %}
 
-<h2>微机应用系统及设计：</h2>
+<p>
+<b><big>微机应用系统及设计：</big></b>
+<a href="wjyy"><small>历史通知</small></a>
+</p>
 {% for s in wjyypost %}
 	<p>日期：{{s.date}}</b></p>
 	<p>内容：{{s.body}}</b></p>
 {% endfor %}
 
-<h2>数字信号处理：</h2>
+<p>
+<b><big>数字信号处理：</big></b>
+<a href="xh"><small>历史通知</small></a>
+</p>
 {% for s in xhpost %}
 	<p>日期：{{s.date}}</b></p>
 	<p>内容：{{s.body}}</b></p>

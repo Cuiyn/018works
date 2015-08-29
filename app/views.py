@@ -97,3 +97,77 @@ def schedule():
 		Weeknum = numWeek,
 		className = className
 		)
+
+#Homework History Query
+@app.route('/sjk')
+def sjk():
+	sjk = db.session.execute("SELECT * FROM post WHERE subject='数据库系统' ORDER BY timestamp desc")
+	return render_template("history.html",
+		title = '数据库系统',
+		Year = now.year,
+		Month = now.month,
+		Day = now.day,
+		Weekday = Week,
+		Weeknum = numWeek,
+		homework = sjk
+		)
+@app.route('/czxt')
+def czxt():
+	czxt = db.session.execute("SELECT * FROM post WHERE subject='操作系统' ORDER BY timestamp desc")
+	return render_template("history.html",
+		title = '操作系统',
+		Year = now.year,
+		Month = now.month,
+		Day = now.day,
+		Weekday = Week,
+		Weeknum = numWeek,
+		homework = czxt
+		)
+@app.route('/txwl')
+def txwl():
+	txwl = db.session.execute("SELECT * FROM post WHERE subject='计算机通信与网络' ORDER BY timestamp desc")
+	return render_template("history.html",
+		title = '计算机通信与网络',
+		Year = now.year,
+		Month = now.month,
+		Day = now.day,
+		Weekday = Week,
+		Weeknum = numWeek,
+		homework = txwl
+		)
+@app.route('/sf')
+def sf():
+	sf = db.session.execute("SELECT * FROM post WHERE subject='算法设计与软件工程' ORDER BY timestamp desc")
+	return render_template("history.html",
+		title = '算法设计与软件工程',
+		Year = now.year,
+		Month = now.month,
+		Day = now.day,
+		Weekday = Week,
+		Weeknum = numWeek,
+		homework = sf
+		)
+@app.route('/wjyy')
+def wjyy():
+	wjyy = db.session.execute("SELECT * FROM post WHERE subject='微机应用系统及设计' ORDER BY timestamp desc")
+	return render_template("history.html",
+		title = '微机应用系统及设计',
+		Year = now.year,
+		Month = now.month,
+		Day = now.day,
+		Weekday = Week,
+		Weeknum = numWeek,
+		homework = wjyy
+		)
+@app.route('/xh')
+def xh():
+	xh = db.session.execute("SELECT * FROM post WHERE subject='数字信号处理' ORDER BY timestamp desc")
+	return render_template("history.html",
+		title = '数字信号处理',
+		Year = now.year,
+		Month = now.month,
+		Day = now.day,
+		Weekday = Week,
+		Weeknum = numWeek,
+		homework = xh
+		)

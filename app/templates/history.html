@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{title}}</h2>
+历史作业通知：
+{% for h in homework %}
+	<p>日期：{{h.date}}</b></p>
+	<p>内容：{{h.body}}</b></p>
+<hr />
+{% endfor %}
+{% endblock %}
